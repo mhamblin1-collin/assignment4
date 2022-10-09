@@ -1,7 +1,7 @@
 FROM fedora:latest as updated-image
 RUN dnf -yqq install tuxpaint vim httpd
 ENTRYPOINT /usr/sbin/httpd -DFOREGROUND
-EXPOSE 8080:80
+EXPOSE 80
 
 FROM updated-image as website1
 COPY website1.html /var/www/html
