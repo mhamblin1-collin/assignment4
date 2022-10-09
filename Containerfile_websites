@@ -6,11 +6,7 @@ EXPOSE 8080:80
 FROM updated-image as website1
 COPY website1.html /var/www/html
 LABEL website=1
-ENTRYPOINT /usr/sbin/httpd -DFOREGROUND
-EXPOSE 8080:80
 
 FROM updated-image as website2
 COPY website2.html /var/www/html
 LABEL website=2
-ENTRYPOINT /usr/sbin/httpd -DFOREGROUND
-EXPOSE 8081:80
