@@ -1,5 +1,5 @@
 FROM fedora:latest
 RUN dnf -yqq install httpd
-VOLUME /var/www/html
+VOLUME /var/www/html/data
 ENTRYPOINT /usr/sbin/httpd -DFOREGROUND
 EXPOSE 80
